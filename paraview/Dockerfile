@@ -4,7 +4,8 @@ USER root
 
 # install paraview
 RUN apt-get update && apt-get install -y --no-install-recommends \
-    paraview
+    paraview \
+    python3-paraview
 
 # do some cleaning up
 RUN apt-get clean && rm -rf /var/lib/apt/lists/*
